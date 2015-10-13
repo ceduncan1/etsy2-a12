@@ -1,0 +1,122 @@
+.container {
+  margin: 0; }
+  .container a {
+    text-decoration: none; }
+  .container .headWide {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E1E3DF; }
+    .container .headWide header {
+      margin: 20px 150px;
+      border-bottom: 1px solid #E1E3DF; }
+      .container .headWide header .head1 {
+        border-bottom: 1px solid #E1E3DF;
+        padding-bottom: 20px;
+        position: relative; }
+        .container .headWide header .head1 .topLeft .icon a {
+          font-family: 'EB Garamond', serif;
+          font-size: 40px;
+          color: #F76400;
+          margin-right: 15px;
+          font-weight: bold; }
+        .container .headWide header .head1 .topLeft .searchBar {
+          position: absolute;
+          top: 10px; }
+          .container .headWide header .head1 .topLeft .searchBar input {
+            height: 29px;
+            border-radius: 3px 0 0 3px;
+            border: 1px solid #CFCBC8; }
+          .container .headWide header .head1 .topLeft .searchBar button {
+            border: 1px solid #2798B3;
+            background-color: #2BA8C6;
+            color: white;
+            font-weight: bold;
+            padding: 7px 14px;
+            margin-left: -5px;
+            border-radius: 0 3px 3px 0; }
+      .container .headWide header .topRight {
+        position: absolute;
+        bottom: 35px;
+        right: 0; }
+      .container .headWide header .topButton a {
+        color: #0092B7;
+        margin: 0 5px; }
+      .container .headWide header .head2 {
+        border-bottom: none;
+        padding: 15px 0;
+        font-size: 14px; }
+        .container .headWide header .head2 span a {
+          padding-right: 20px;
+          color: #555555; }
+  .container .bottomWide {
+    background-color: #F5F5F1;
+    padding-top: 20px; }
+    .container .bottomWide .bottomHalf {
+      padding: 20px 150px; }
+      .container .bottomWide .bottomHalf .body {
+        vertical-align: top; }
+        .container .bottomWide .bottomHalf .body .bodyL {
+          vertical-align: top;
+          font-size: 12px;
+          width: 25%;
+          height: auto;
+          display: inline-block;
+          overflow: hidden; }
+          .container .bottomWide .bottomHalf .body .bodyL .top .asideTitle {
+            font-weight: bold;
+            color: #555555; }
+          .container .bottomWide .bottomHalf .body .bodyL .top ul {
+            padding-left: 10px;
+            border: 1px solid #E1E3DF;
+            background-color: white;
+            list-style-type: none;
+            font-weight: bold; }
+            .container .bottomWide .bottomHalf .body .bodyL .top ul li {
+              font-weight: normal;
+              padding-left: 10px; }
+              .container .bottomWide .bottomHalf .body .bodyL .top ul li a {
+                color: #0093B8; }
+          .container .bottomWide .bottomHalf .body .bodyL .bottom .asideTitle {
+            font-weight: bold;
+            color: #555555;
+            padding-bottom: 10px; }
+          .container .bottomWide .bottomHalf .body .bodyL .bottom .narrowSearch {
+            border: 1px solid #E1E3DF;
+            background-color: white; }
+            .container .bottomWide .bottomHalf .body .bodyL .bottom .narrowSearch #colorOptions ul {
+              list-style-type: none; }
+              .container .bottomWide .bottomHalf .body .bodyL .bottom .narrowSearch #colorOptions ul .colorChoice {
+                border: 1px solid #E2E2E2;
+                height: 22px;
+                width: 22px; }
+        .container .bottomWide .bottomHalf .body .bodyR {
+          width: 70%;
+          height: 100px;
+          display: inline-block; }
+          .container .bottomWide .bottomHalf .body .bodyR .items .itemBox {
+            border: 1px solid;
+            border-color: #E1E3DF #E1E3DF #CBCCC9 #E1E3DF;
+            background-color: white;
+            display: inline-block;
+            width: 32%;
+            height: 250px;
+            overflow: hidden; }
+            .container .bottomWide .bottomHalf .body .bodyR .items .itemBox .itemImage {
+              height: 180px;
+              width: 180px;
+              overflow: hidden; }
+              .container .bottomWide .bottomHalf .body .bodyR .items .itemBox .itemImage img {
+                max-height: 100%;
+                max-width: 100%; }
+            .container .bottomWide .bottomHalf .body .bodyR .items .itemBox .itemInfo {
+              width: 100%;
+              font-size: 12px; }
+              .container .bottomWide .bottomHalf .body .bodyR .items .itemBox .itemInfo .itemTitle {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #575757;
+                height: 14px; }
+              .container .bottomWide .bottomHalf .body .bodyR .items .itemBox .itemInfo .itemShop {
+                color: #AAAAAA; }
+              .container .bottomWide .bottomHalf .body .bodyR .items .itemBox .itemInfo .itemPrice {
+                color: #7BC146; }

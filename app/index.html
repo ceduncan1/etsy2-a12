@@ -1,7 +1,283 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SAMPLE PROJECT</title>
+  <title>space cat - Etsy</title>
+  <!-- <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" /> -->
+  <!-- <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" /> -->
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="headWide">
+    <header>
+      <section class="head1">
+        <span class="topLeft">
+          <span class="icon"><a href="www.etsy.com">Etsy</a></span>
+          <span class="searchBar">
+            <input type="text">
+            <button>Search</button>
+          </span>
+        </span>
+        <span class="topRight">
+          <span class="topButton"><a href="#">Sell on Etsy</a></span>
+          <span class="topButton"><a href="#">Register</a></span>
+          <span class="topButton" id="signIn"><a href="#">Sign in</a></span>
+          <!-- vertical line -->
+          <span class="topButton"><a href="#">Cart</a></span>
+        </span>
+      </section>
+      <!-- <hr> -->
+      <nav class="head2">
+        <span><a href="#">Clothing & Accessories</a></span>
+        <span><a href="#">Jewelry</a></span>
+        <span><a href="#">Craft Supplies & Tools</a></span>
+        <span><a href="#">Weddings</a></span>
+        <span><a href="#">Entertainment</a></span>
+        <span><a href="#">Home & Living</a></span>
+        <span><a href="#">Kids & Baby</a></span>
+        <span><a href="#">Vintages</a></span>
+      </nav>
+      <!-- <hr> -->
+    </header>
+    </div>
+
+    <div class="bottomWide">
+    <div class="bottomHalf">
+      <div class="body">
+        <aside class="bodyL">
+          <section class="top">
+            <div class="asideTitle">Show results for:</div>
+            <ul>All Categories
+              <li><a href="#">Jewelry</a></li>
+              <li><a href="#">Art & Collectibles</a></li>
+              <li><a href="#">Craft Supplies & Tools</a></li>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Bags & Purses</a></li>
+              <li><a href="#">Electronics & Accesories</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Home & Living</a></li>
+              <li><a href="#">Pet Supplies</a></li>
+              <li><a href="#">Paper & Party Supplies</a></li>
+              <li><a href="#">Books, Movies & Music</a></li>
+              <li><a href="#">Bath & Beauty</a></li>
+              <li><a href="#">Toys & Games</a></li>
+              <li><a href="#">Shoes</a></li>
+              <li><a href="#">Weddings</a></li>
+            </ul>
+          </section>
+          <section class="bottom">
+            <div class="asideTitle">Refine your search</div>
+            <div class="narrowSearch">
+              <div id="type">Type</div>
+                <div class="asideHeading">Item Type</div>
+                <div class="radio">
+                  <input type="radio" name="type" checked> All Items<br>
+                  <input type="radio" name="type"> Handmade<br>
+                  <input type="radio" name="type"> Vintage<br>
+                </div>
+              <hr>
+              <div>Price</div>
+                <div class="asideHeading">Price</div>
+              <hr>
+              <div id="colorOptions">Color</div>
+                <div class="asideHeading">Filter by Color</div>
+                  <ul>
+                    <li class="colorChoice" id="red"><a href="#"></a></li>
+                    <li class="colorChoice" id="orange"><a href="#"></a></li>
+                    <li class="colorChoice" id="yellow"><a href="#"></a></li>
+                    <li class="colorChoice" id="green"><a href="#"></a></li>
+                    <li class="colorChoice" id="blue"><a href="#"></a></li>
+                    <li class="colorChoice" id="purple"><a href="#"></a></li>
+                    <li class="colorChoice" id="black"><a href="#"></a></li>
+                    <li class="colorChoice" id="white"><a href="#"></a></li>
+                  </ul>
+              <hr>
+              <div>Ordering</div>
+                <div class="asideHeading">Ordering Options</div>
+              <hr>
+              <div>Location</div>
+                <div class="asideHeading">Shop Location</div>
+              <hr>
+              <div>Ship</div>
+                <div class="asideHeading">Ship To</div>
+            </div>
+          </section>
+        </aside>
+        <section class="bodyR">
+          <span><a href="#">All Categories</a> > "space cat" (2552 Results)</span>
+          <span>Sort by: <a href="#">Relevancy</a></span>
+          <div class="items"></div>
+          <section>
+            <p>related to <mark>space cat</mark></p>
+            <p><a href="#">galaxy cat</a></p>
+            <p> Looking for shops? <a href="#">Spacecat1</a>, <a href="#">SpaceCatStuds</a>, <a href="#">SpaceCatGirl</a>. <a href="#">See more</a>.</p>
+          </section>
+          <div class="pageNums">
+            <button name="back" disabled="true"><</button>
+            <button name="pg1" disabled="true">1</button>
+            <button name="pg2">2</button>
+            <button name="pg3">3</button>
+            <button name="pg4">4</button>
+            <button name="pg5">5</button>
+            <button name="pg6">6</button>
+            <button name="pg7">7</button>
+            <button name="pg8">8</button>
+            <button name="etc" disabled="true">...</button>
+            <button name="pg61">61</button>
+            <button name="next">></button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <hr>
+  </div>
+  </div>
+
+
+  <script type="text/template" id="itemTemplate">
+    <div class="itemBox">
+      <div class="itemImage">
+        <a href="<%= url %>">
+          <img class="pics" src="<%=Images[0].url_570xN%>">
+        </a>
+      </div>
+      <div class="itemInfo">  
+        <div class="itemTitle"><%= title %></div> 
+        <span class="itemShop"><%= Shop.shop_name %></span>
+        <span class="itemPrice">$<%= price %> <%= currency_code %></span>
+      </div>
+    </div>
+  </script>
+
+
+  <script src="js/vendor.js"></script>  
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="practice">
+  <script type="text/template" id="itemTemplate"></script>
+    <div class="itemBox">
+      <img src=<%=Images[0].url_75x75%>>
+      <div class="itemInfo">
+        <div class="itemTitle"><%= title %></div>
+        <span class="itemShop"><%= shop %></span>
+        <span class="itemPrice">$<%= price %><%= currencyCode %></span>
+      </div>
+
+    </div>
+  </script> -->
+
+<!--   <header>
+    <section class="head1">
+      <p>header 1</p>
+    </section>
+    <hr>
+    <nav class="head2">
+      <span><a href="#">Clothing & Accessories</a></span>
+      <span><a href="#">Jewelry</a></span>
+      <span><a href="#">Craft Supplies & Tools</a></span>
+      <span><a href="#">Weddings</a></span>
+      <span><a href="#">Entertainment</a></span>
+      <span><a href="#">Home & Living</a></span>
+      <span><a href="#">Kids & Baby</a></span>
+      <span><a href="#">Vintages</a></span>
+    </nav> -->
+<!--     <hr>
+  </header>
+
+
+  <div class="bottomHalf">
+    <body>
+      <hr>
+      <aside class="bodyL">
+        <section class="top">
+          <div class="asideTitle">Show results for:</div>
+          <ul>All Categories
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Art & Collectibles</a></li>
+            <li><a href="#">Craft Supplies & Tools</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Bags & Purses</a></li>
+            <li><a href="#">Electronics & Accesories</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Home & Living</a></li>
+            <li><a href="#">Pet Supplies</a></li>
+            <li><a href="#">Paper & Party Supplies</a></li>
+            <li><a href="#">Books, Movies & Music</a></li>
+            <li><a href="#">Bath & Beauty</a></li>
+            <li><a href="#">Toys & Games</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Weddings</a></li>
+          </ul>
+        </section>
+        <section class="bottom">
+          <div>Refine your search</div>
+          <div class="narrowSearch">
+            <div>Type</div>
+            <hr>
+            <div>Price</div>
+            <hr>
+            <div>Color</div>
+            <hr>
+            <div>Ordering</div>
+            <hr>
+            <div>Location</div>
+            <hr>
+            <div>Ship</div>
+          </div>
+        </section>
+      </aside>
+      <section class="bodyR">
+        
+      </section>
+    </body>
+  </div>
+  <hr>
+
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>etsy search</title>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -12,4 +288,4 @@
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
-</html>
+</html> -->
