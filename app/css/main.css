@@ -40,6 +40,9 @@
       .container .headWide header .topButton a {
         color: #0092B7;
         margin: 0 5px; }
+      .container .headWide header .topButton #signIn {
+        border: 1px solid #0092B7;
+        border-radius: 3px; }
       .container .headWide header .head2 {
         border-bottom: none;
         padding: 15px 0;
